@@ -1,0 +1,42 @@
+<div class="cart-top continer-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img style="width: 60px; margin-top: 5px;" src="https://cdn.shopify.com/s/files/1/1414/7912/products/build-your-own-gift-box-336926_600x.jpg?v=1652615377" alt=""/>
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width: 56px; margin-top: 5px;" src="https://cdn.shopify.com/s/files/1/0510/0047/5838/products/FoundRae-MediumStrongHearts-18k.jpg?v=1665693251" alt=""/>
+                <h6>Bracelets</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img  style="width: 60px; margin-top: 5px;" src="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/30/1083701/1.jpg?4162" alt=""/>
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width: 60px; margin-top: 5px;" src="https://cf.shopee.ph/file/ph-11134201-23020-uu3fwy2y3inv21" alt=""/>
+                <h6>Wristwatch</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card-col-md-3">
+                <img src="{{item.image}}" alt=""/>
+                <h5 style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>
+                <p>{{item.description}}</p>
+                <p><strong>Price:</strong>{{item.price}}</p>
+                <button class="btn btn-primary"(click) = addtoCart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
